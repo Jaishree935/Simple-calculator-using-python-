@@ -1,0 +1,38 @@
+from tkinter import *
+s=Tk()
+s.geometry("400x400")
+s.title("Hello Python")
+y=Frame(s)
+y.pack(pady=20)
+x=Label(y,text="First Number",)
+x.pack(padx=10,side=LEFT)
+a=Entry(y)  #############FIRST ENTRY
+a.pack(padx=10,side=LEFT)
+c=Frame(s)
+c.pack()
+x=Label(c,text="Second Number")
+x.pack(pady=10,side=LEFT)
+b=Entry(c)  ############SECOND ENTRY
+b.pack(padx=10,side=LEFT)
+d=Frame(s)
+d.pack(padx=10,pady=15)
+def add():
+    num1=int(a.get())
+    num2=int(b.get())
+    i.insert(0,str(num1+num2))
+def subtract():
+    num1=int(a.get())
+    num2=int(b.get())
+    i.insert(0,str(num1-num2))
+
+e=Button(d,text="Add",command=add)
+e.pack(padx=5,pady=5,side=LEFT)
+f=Button(d,text="Subtract",command=subtract,width=10)
+f.pack(padx=5,pady=5,side=LEFT)
+g=Frame(s)
+g.pack(padx=10,pady=15)
+h=Label(g,text="Result")
+h.pack(padx=25,side=LEFT)
+i=Entry(g)###THIRD ENTRY
+i.pack(padx=10,side=LEFT)
+s.mainloop()
